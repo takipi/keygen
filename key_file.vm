@@ -1,0 +1,32 @@
+# Takipi Installation created for $username
+# http://www.takipi.com
+
+# The secret key is your way of ensuring that all data going outside of your server is encrypted.
+# This key will also be needed when viewing information on takipi.com
+# The key is not stored on Takipi's servers and is unrecoverable.
+
+# Your key is:
+$secret_key
+
+# Installing Takipi on your server:
+#if ($proxy.equals(""))
+# Using Wget:
+wget -O - -o /dev/null https://s3.amazonaws.com/app-takipi-com/deploy/linux/takipi-installer | sudo bash /dev/stdin -i --secret_key=$secret_key
+
+# Using cURL:
+curl -s /dev/null https://s3.amazonaws.com/app-takipi-com/deploy/linux/takipi-installer | sudo bash /dev/stdin -i --secret_key=$secret_key
+
+#else
+# Using Wget:
+wget -e set_proxy=on -e https_proxy=$proxy -O - -o /dev/null https://s3.amazonaws.com/app-takipi-com/deploy/linux/takipi-installer | sudo bash /dev/stdin -i --secret_key=$secret_key --https_proxy=$proxy
+
+# Using cURL:
+curl -x $proxy -s /dev/null https://s3.amazonaws.com/app-takipi-com/deploy/linux/takipi-installer | sudo bash /dev/stdin -i --secret_key=$secret_key --https_proxy=$proxy
+#end
+
+# To uninstall Takipi:
+sudo /opt/takipi/etc/takipi-installer -u
+
+# Make sure to remove the Takipi's agent argument "-agentpath:/opt/takipi/lib/libTakipiAgent.so" from your Java VM arguments.
+
+# End.
