@@ -35,6 +35,7 @@ public class TakipiCom
 			
 			if (idPrefix.isEmpty())
 			{
+				System.err.println("Problem generating key. Abort");
 				return null;
 			}
 			

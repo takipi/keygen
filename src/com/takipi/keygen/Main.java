@@ -10,8 +10,8 @@ public class Main
 	{
 		if (!(args.length == 3 || args.length == 4))
 		{
-			System.out.println("Takipi Key Generator");
-			System.out.println("====================");
+			System.out.println("Takipi Key Generator - www.takipi.com");
+			System.out.println("=====================================");
 			System.out.println("Usage: USERNAME PASSWORD NAMESPACES [SERVER-PROXY]");
 			System.out.println("Example: john@example.com Pa$$woRd com.company;org.company2.product");
 			
@@ -33,15 +33,14 @@ public class Main
 		
 		if (keyPrefix == null)
 		{
-			System.err.println("Problem creating key");
 			System.err.println("Contact keygen@takipi.com for help.");
 			return;
 		}
 		
 		String secretKey = SecretKeyGenerator.generateKey(keyPrefix); 
 		
-		System.out.println("Your secret key is: " + secretKey);
-		
 		InstructionsBuilder.buildInstructionsFile(username, secretKey, proxy);
+		
+		System.out.println("-- Takipi Key Generator ended.");
 	}
 }

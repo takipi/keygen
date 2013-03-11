@@ -26,14 +26,14 @@ public class InstructionsBuilder
 		try
 		{
 			FileUtils.writeStringToFile(new File(filename), installInstructions);
+			
+			System.out.println("");
+			System.out.println("File saved as: " + filename);
 		}
 		catch (IOException e)
 		{
-			System.err.println("Can't create file '" + filename + "'with install instructions");
+			System.err.println("Can't create file '" + filename + "' with install instructions");
 		}
-		
-		System.out.println("");
-		System.out.println("File saved as: " + filename);
 	}
 	
 	private static String getFilenameForDownload(String input, String proxy)
