@@ -13,9 +13,9 @@ public class InstructionsBuilder
 	{
 		String installInstructions = InstructionsVelocity.generateText(username, secretKey, proxy);
 		
-		String id = secretKey.substring(0, secretKey.indexOf('#'));
+		String serverId = secretKey.substring(0, secretKey.indexOf('#'));
 		
-		String filenamePrefix = username+"-"+id;
+		String filenamePrefix = username + "-" + serverId;
 		
 		String filename = getFilenameForDownload(filenamePrefix, proxy);
 		
