@@ -31,5 +31,4 @@ public class HexUtil
 			throw new IllegalStateException(e);
 		}
 	}
-	
 }
