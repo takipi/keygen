@@ -12,15 +12,24 @@ public class Main
 		{
 			System.out.println("Takipi Key Generator - www.takipi.com");
 			System.out.println("=====================================");
-			System.out.println("Usage: USERNAME PASSWORD NAMESPACES [SERVER-PROXY]");
-			System.out.println("Example: john@example.com Pa$$woRd com.company;org.company2.product");
+			
+			printUsage();
 			
 			return;
 		}
 		
 		String username 	= args[0];
 		String password 	= args[1];
-		String namespaces 	= args[2];
+		String packages 	= args[2];
+		
+		if ((username.isEmpty()) || (password.isEmpty()) || (packages.isEmpty()))
+		{
+			System.err.println("Problem with parameters.");
+			
+			printUsage();
+			
+			return;
+		}
 		
 		String proxy = "";
 		
@@ -29,7 +38,7 @@ public class Main
 			proxy = args[3];
 		}
 		
-		String keyPrefix = TakipiCom.generateKeyPrefix(username, password, namespaces);
+		String keyPrefix = TakipiCom.generateKeyPrefix(username, password, packages);
 		
 		if (keyPrefix == null)
 		{
@@ -42,5 +51,11 @@ public class Main
 		InstructionsBuilder.buildInstructionsFile(username, secretKey, proxy);
 		
 		System.out.println("-- Takipi Key Generator ended.");
+	}
+	
+	private static void printUsage()
+	{
+		System.out.println("Usage: USERNAME PASSWORD \"PACKAGES\" [SERVER-PROXY]");
+		System.out.println("Example: john@example.com Pa$$woRd \"com.company;org.company2.product\"");
 	}
 }

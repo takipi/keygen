@@ -11,7 +11,7 @@ public class TakipiCom
 	public static String GENERATE_SERVLET	= TAKIPI_BASE_URL + "/app/keygen/generate";
 	public static String REQUEST_METHOD		= "POST";
 	
-	public static String generateKeyPrefix(String username, String password, String namespaces)
+	public static String generateKeyPrefix(String username, String password, String packages)
 	{
 		try
 		{
@@ -26,7 +26,7 @@ public class TakipiCom
 			DataOutputStream dataOutput = new DataOutputStream(httpCon.getOutputStream());
 			dataOutput.writeUTF(username);
 			dataOutput.writeUTF(password);
-			dataOutput.writeUTF(namespaces);
+			dataOutput.writeUTF(packages);
 			dataOutput.flush();
 			dataOutput.close();
 			
