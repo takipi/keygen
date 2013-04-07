@@ -8,7 +8,7 @@
 # Your key is:
 $secret_key
 
-# Installing Takipi on your server:
+# Installing Takipi on Linux:
 #if ($proxy.equals(""))
 # Using Wget:
 wget -O - -o /dev/null https://s3.amazonaws.com/app-takipi-com/deploy/linux/takipi-installer | sudo bash /dev/stdin -i --secret_key=$secret_key
@@ -28,5 +28,16 @@ curl -x $proxy -s /dev/null https://s3.amazonaws.com/app-takipi-com/deploy/linux
 sudo /opt/takipi/etc/takipi-installer -u
 
 # Make sure to remove the Takipi's agent argument "-agentpath:/opt/takipi/lib/libTakipiAgent.so" from your Java VM arguments.
+
+# Using Chef:
+git clone https://github.com/takipi-cookbooks/takipi
+
+# Installing Takipi on Windows:
+1. Download takipi installation file from: https://s3.amazonaws.com/app-takipi-com/deploy/win/takipi.zip
+2. Extract it to a folder (usually c:\takipi)
+3. Run from cmd: <FOLDER>\setup.bat $secret_key
+4. Follow on screen instructions to finish setup
+
+# To uninstall run <FOLDER>\uninstall.bat
 
 # End.
