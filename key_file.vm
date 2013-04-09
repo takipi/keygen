@@ -37,7 +37,7 @@ git clone https://github.com/takipi-cookbooks/takipi
 # Installing Takipi on Windows:
 1. Download takipi's installation file from: https://s3.amazonaws.com/app-takipi-com/deploy/win/takipi.zip
 2. Extract it to a folder (usually c:\takipi)
-3. Run from cmd: <FOLDER>\setup.bat $secret_key
+3. Run from cmd: <FOLDER>\setup.bat "$secret_key"
 4. Follow the on screen instructions to finish setup
 
 # To uninstall run <FOLDER>\uninstall.bat

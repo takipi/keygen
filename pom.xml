@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>takipi</groupId>
 	<artifactId>keygen</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<name>Takipi Key Generator</name>
 	<description>Takipi key generator used to build secret keys to be used with Takipi server debugging</description>
 	<properties>
