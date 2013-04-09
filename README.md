@@ -10,7 +10,7 @@ Installation
 a. Fork / Get the code and run<br/>
 ```mvn clean compile assembly:single```<br/>
 b. Download the latest release<br/>
-https://s3.amazonaws.com/app-takipi-com/keygen/keygen-1.0.0-jar-with-dependencies.jar
+https://s3.amazonaws.com/app-takipi-com/keygen/keygen-1.0.1-jar-with-dependencies.jar
 
 Usage
 ======
