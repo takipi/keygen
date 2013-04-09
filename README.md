@@ -19,6 +19,6 @@ PACKAGES are your top packages i.e. "com.company;org.mycompany2.product"<br/>
 If you plan to install Takipi on a machine behind a proxy  you can also pass its address (i.e http://192.168.1.11:8080) 
 for use bt the installation scripts.
 
-```java -jar keygen-1.0.0-jar-with-dependencies.jar USERNAME PASSWORD "PACKAGES" [PROXY]```
+```java -jar keygen-1.0.1-jar-with-dependencies.jar USERNAME PASSWORD "PACKAGES" [PROXY]```
 
 ----------
