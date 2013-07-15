@@ -3,25 +3,32 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>takipi</groupId>
 	<artifactId>keygen</artifactId>
-	<version>1.0.1</version>
+	<version>1.1.0</version>
 	<name>Takipi Key Generator</name>
 	<description>Takipi key generator used to build secret keys to be used with Takipi server debugging</description>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<build>
+<sourceDirectory>src</sourceDirectory>
 		<resources>
 			<resource>
-				<directory>.
-			</directory>
+				<directory>
+					.
+				</directory>
 				<includes>
-					<include>
-						key_file.vm
-					</include>
+						<include>
+							key_file.vm
+						</include>
 				</includes>
 			</resource>
+        <resource>
+            <directory>${project.build.sourceDirectory}</directory>
+        </resource>
+        <resource>
+            <directory>${basedir}/src/main/resources</directory>
+        </resource>
 		</resources>
-		<sourceDirectory>src</sourceDirectory>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>

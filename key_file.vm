@@ -29,8 +29,6 @@ curl -x $proxy -s /dev/null https://s3.amazonaws.com/app-takipi-com/deploy/linux
 # To uninstall Takipi:
 sudo /opt/takipi/etc/takipi-installer -u
 
-# Make sure to remove the Takipi's agent argument "-agentpath:/opt/takipi/lib/libTakipiAgent.so" from your Java VM arguments.
-
 # Using Chef:
 git clone https://github.com/takipi-cookbooks/takipi
 
