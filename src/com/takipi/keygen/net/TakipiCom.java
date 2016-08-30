@@ -7,7 +7,7 @@ import java.net.URL;
 
 public class TakipiCom
 {
-	public static String TAKIPI_BASE_URL	= "https://app.takipi.com";
+	public static String TAKIPI_BASE_URL	= "https://app.overops.com";
 	public static String GENERATE_SERVLET	= TAKIPI_BASE_URL + "/app/keygen/generate";
 	public static String REQUEST_METHOD		= "POST";
 	
@@ -43,7 +43,7 @@ public class TakipiCom
 		catch (Exception e)
 		{
 			e.printStackTrace();
-			System.err.println("Problem reaching to Takipi's server. Abort");
+			System.err.println("Problem reaching to OverOps's server. Abort");
 			return null;
 		}
 	}

@@ -3,9 +3,9 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>takipi</groupId>
 	<artifactId>keygen</artifactId>
-	<version>1.1.0</version>
-	<name>Takipi Key Generator</name>
-	<description>Takipi key generator used to build secret keys to be used with Takipi server debugging</description>
+	<version>1.2.0</version>
+	<name>OverOps Key Generator</name>
+	<description>OverOps key generator used to build secret keys to be used with OverOps server debugging</description>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>

@@ -8,12 +8,10 @@ public class Main
 {
 	public static void main(String[] args) throws Exception
 	{
-		Thread.sleep(15000);
-		
 		if (!(args.length == 2 || args.length == 3))
 		{
-			System.out.println("Takipi Key Generator - www.takipi.com");
-			System.out.println("=====================================");
+			System.out.println("OverOps Key Generator - www.overops.com");
+			System.out.println("=======================================");
 			
 			printUsage();
 			
@@ -34,16 +32,11 @@ public class Main
 		
 		String proxy = "";
 		
-		if (args.length == 3)
-		{
-			proxy = args[2];
-		}
-		
 		String keyPrefix = TakipiCom.generateKeyPrefix(username, password);
 		
 		if (keyPrefix == null)
 		{
-			System.err.println("Contact keygen@takipi.com for help.");
+			System.err.println("Contact hello@overops.com for help.");
 			return;
 		}
 		
@@ -51,12 +44,12 @@ public class Main
 		
 		InstructionsBuilder.buildInstructionsFile(username, secretKey, proxy);
 		
-		System.out.println("-- Takipi Key Generator ended.");
+		System.out.println("-- OverOps Key Generator ended.");
 	}
 	
 	private static void printUsage()
 	{
-		System.out.println("Usage: USERNAME PASSWORD [SERVER-PROXY]");
+		System.out.println("Usage: USERNAME PASSWORD");
 		System.out.println("Example: john@example.com Pa$$woRd");
 	}
 }
